@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AttendMate - Project Documentation</title>
+    <!-- Google Fonts: Inter for general text, Fira Code for code blocks -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS for a clean look -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif; /* Using Inter font */
+        line-height: 1.7; /* Slightly more line height for readability */
+        color: #343a40; /* Darker text for better contrast */
+        padding-top: 20px;
+        padding-bottom: 50px;
+        background-color: #f0f2f5; /* Lighter background */
+      }
+      .container {
+        max-width: 900px;
+        background-color: #ffffff;
+        padding: 45px; /* Slightly more padding */
+        border-radius: 12px; /* More rounded corners */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Softer, larger shadow */
+      }
+      header {
+        background: linear-gradient(
+          to right,
+          #007bff,
+          #0056b3
+        ); /* Gradient background */
+        color: #ffffff;
+        padding: 40px 0; /* More padding */
+        margin-bottom: 50px !important; /* Ensure good spacing */
+        border-radius: 8px; /* Rounded corners for header */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      header h1 {
+        color: #ffffff; /* White title */
+        border-bottom: none; /* Remove border from header h1 */
+        padding-bottom: 0;
+        font-weight: 700; /* Bolder title */
+        font-size: 3.2rem; /* Larger title */
+      }
+      header p.lead {
+        color: rgba(
+          255,
+          255,
+          255,
+          0.9
+        ); /* Slightly transparent white for lead */
+        font-size: 1.25rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #0056b3; /* Primary blue for headings */
+        margin-top: 40px; /* More top margin for sections */
+        margin-bottom: 20px; /* More bottom margin */
+        font-weight: 600; /* Semi-bold headings */
+      }
+      h1 {
+        border-bottom: 2px solid #007bff; /* Keep border for main sections */
+        padding-bottom: 12px;
+      }
+      h2 {
+        border-bottom: 1px solid #e9ecef; /* Lighter border for sub-sections */
+        padding-bottom: 10px;
+      }
+      h3 {
+        color: #007bff; /* Slightly different shade for sub-sub headings */
+        font-size: 1.5rem;
+        margin-top: 30px;
+      }
+      h4 {
+        font-size: 1.2rem;
+        color: #495057;
+      }
+
+      code {
+        background-color: #e9ecef;
+        padding: 3px 6px; /* Slightly more padding */
+        border-radius: 5px; /* More rounded */
+        font-family: "Fira Code", "Courier New", Courier, monospace; /* A common coding font */
+        font-size: 0.9rem;
+        color: #c2185b; /* A distinct color for inline code */
+      }
+      pre {
+        background-color: #282c34; /* Dark background for code blocks */
+        color: #abb2bf; /* Light text for code */
+        padding: 20px;
+        border-radius: 8px; /* More rounded */
+        overflow-x: auto;
+        font-family: "Fira Code", "Courier New", Courier, monospace;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Inner shadow for depth */
+      }
+      ul,
+      ol {
+        margin-left: 25px; /* Slightly more indentation */
+        margin-bottom: 20px;
+      }
+      ul li,
+      ol li {
+        margin-bottom: 8px; /* Spacing between list items */
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Smooth transition for links */
+      }
+      a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+      .fab,
+      .fas {
+        /* Font Awesome icons */
+        margin-right: 8px; /* Spacing for icons */
+        color: #007bff; /* Color for icons */
+      }
+      hr {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08); /* Lighter, subtle horizontal rule */
+      }
+      footer {
+        margin-top: 60px !important;
+        padding-top: 20px;
+        border-top: 1px solid #e9ecef;
+        color: #6c757d;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="text-center mb-5">
+        <h1 class="display-4">AttendMate - Project Documentation</h1>
+        <p class="lead">
+          A comprehensive attendance management system built with PHP, HTML,
+          CSS, and JavaScript.
+        </p>
+      </header>
+
+      <section id="about">
+        <h2>1. About AttendMate</h2>
+        <p>
+          AttendMate is designed to streamline the process of managing student
+          attendance for educational institutions. It provides an intuitive
+          interface for administrators to mark and view attendance, manage
+          student records, and generate reports. Students can also view their
+          attendance records and stay informed through announcements.
+        </p>
+        <p>
+          This project aims to provide a reliable and efficient solution for
+          tracking attendance, reducing manual errors, and improving
+          communication between faculty and students.
+        </p>
+      </section>
+
+      <hr />
+
+      <section id="features">
+        <h2>2. Features</h2>
+        <p>
+          AttendMate offers a robust set of features categorized by user roles:
+        </p>
+
+        <h3>Admin Features:</h3>
+        <ul>
+          <li>
+            <strong>Dashboard:</strong> A centralized overview of system
+            activities and quick access to key functionalities.
+          </li>
+          <li>
+            <strong>Manage Students:</strong> CRUD operations (Create, Read,
+            Update, Delete) for student records, including adding new students,
+            editing profiles, and removing inactive accounts.
+          </li>
+          <li>
+            <strong>Mark Attendance:</strong> Efficient system for recording
+            daily attendance for various classes/batches.
+          </li>
+          <li>
+            <strong>View Attendance:</strong> Detailed view of attendance
+            records, filterable by date, student, or class.
+          </li>
+          <li>
+            <strong>Attendance Reports:</strong> Generate insightful reports
+            (e.g., daily, weekly, monthly summaries, absentee lists) for
+            analysis.
+          </li>
+          <li>
+            <strong>Announcements:</strong> Broadcast important messages and
+            updates to all students.
+          </li>
+          <li>
+            <strong>Remark System:</strong> Ability to add remarks or notes
+            related to student performance or behavior.
+          </li>
+          <li>
+            <strong>View All Remarks:</strong> Centralized view of all remarks
+            made by administrators.
+          </li>
+        </ul>
+
+        <h3>Student Features:</h3>
+        <ul>
+          <li>
+            <strong>Dashboard:</strong> A personalized overview showing quick
+            stats and important notifications.
+          </li>
+          <li>
+            <strong>My Attendance:</strong> Students can view their own
+            attendance history and overall attendance percentage.
+          </li>
+          <li>
+            <strong>My Profile:</strong> View and update personal profile
+            information.
+          </li>
+          <li>
+            <strong>Announcements:</strong> Receive and read announcements
+            posted by administrators.
+          </li>
+          <li>
+            <strong>Change Password:</strong> Securely update login credentials.
+          </li>
+        </ul>
+        <p>
+          Additionally, the system includes
+          <strong>Role-Based Access Control</strong> to ensure that users only
+          access functionalities relevant to their permissions (Admin vs.
+          Student).
+        </p>
+      </section>
+
+      <hr />
+
+      <section id="technologies">
+        <h2>3. Technologies Used</h2>
+        <p>
+          AttendMate is built using a combination of modern web technologies:
+        </p>
+        <ul>
+          <li>
+            <strong>Frontend:</strong>
+            <ul>
+              <li>
+                <i class="fab fa-html5"></i> <strong>HTML5:</strong> For
+                structuring the web content.
+              </li>
+              <li>
+                <i class="fab fa-css3-alt"></i> <strong>CSS3:</strong> For
+                styling and responsive design, enhanced with custom CSS.
+              </li>
+              <li>
+                <i class="fab fa-js"></i> <strong>JavaScript:</strong> For
+                interactive elements and dynamic content.
+              </li>
+              <li>
+                <i class="fab fa-bootstrap"></i> <strong>Bootstrap 5:</strong> A
+                powerful front-end framework for responsive and mobile-first
+                design.
+              </li>
+              <li>
+                <i class="fas fa-font-awesome"></i>
+                <strong>Font Awesome 6:</strong> For scalable vector icons.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Backend:</strong>
+            <ul>
+              <li>
+                <i class="fab fa-php"></i> <strong>PHP:</strong> Server-side
+                scripting language for logic, database interaction, and session
+                management.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Database:</strong>
+            <ul>
+              <li>
+                <i class="fas fa-database"></i> <strong>MySQL:</strong> A
+                relational database management system for storing application
+                data.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section id="setup">
+        <h2>4. Setup and Installation</h2>
+        <p>
+          To get AttendMate up and running on your local machine, follow these
+          steps:
+        </p>
+
+        <h3>4.1. Prerequisites</h3>
+        <p>Ensure you have the following software installed on your system:</p>
+        <ul>
+          <li>
+            <strong>Web Server with PHP:</strong> A local server environment
+            like
+            <a href="https://www.apachefriends.org/" target="_blank">XAMPP</a>,
+            <a href="https://www.wampserver.com/" target="_blank">WAMP</a>, or
+            <a href="https://www.mamp.info/en/mamp/" target="_blank">MAMP</a> is
+            recommended, as it includes Apache, PHP, and MySQL.
+          </li>
+          <li>
+            <strong>MySQL Database:</strong> Comes bundled with XAMPP/WAMP/MAMP.
+          </li>
+          <li>
+            <strong>Git:</strong> For cloning the repository (<a
+              href="https://git-scm.com/downloads"
+              target="_blank"
+              >Download Git</a
+            >).
+          </li>
+        </ul>
+
+        <h3>4.2. Database Setup</h3>
+        <ol>
+          <li>
+            Start your Apache and MySQL services from your XAMPP/WAMP/MAMP
+            control panel.
+          </li>
+          <li>
+            Open your web browser and go to `http://localhost/phpmyadmin/`.
+          </li>
+          <li>Create a new database named `attendmate_db`.</li>
+          <li>
+            Import the provided SQL file to set up the necessary tables and
+            initial data.
+          </li>
+          <p>
+            <strong>Note:</strong> You will find the `database.sql` file in the
+            root of the project repository. Select the `attendmate_db` database,
+            go to the "Import" tab, choose the `database.sql` file, and click
+            "Go".
+          </p>
+          <pre><code>-- Example SQL content (you'll put your actual schema here)
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'user') NOT NULL
+);
+
+CREATE TABLE students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNIQUE,
+    enrollment_number VARCHAR(100) UNIQUE NOT NULL,
+    -- ... other student details
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- And so on for attendance, announcements, remarks tables.
+-- Include an INSERT statement for a default admin user.
+INSERT INTO users (name, email, password, role) VALUES ('Admin User', 'admin@attendmate.com', 'adminpassword', 'admin');
+</code></pre>
+        </ol>
+
+        <h3>4.3. Project Files Setup</h3>
+        <ol>
+          <li>
+            <strong>Clone the repository:</strong> Open your terminal or Git
+            Bash and run:
+            <pre><code>git clone https://github.com/CodezHubByte/AttendMate-System</code></pre>
+          </li>
+          <li>
+            <strong>Place project files:</strong>
+            <ul>
+              <li>
+                If using XAMPP, move the cloned `AttendMate` folder into the
+                `htdocs` directory (e.g., `C:\xampp\htdocs\AttendMate`).
+              </li>
+              <li>
+                If using WAMP, move it into the `www` directory (e.g.,
+                `C:\wamp\www\AttendMate`).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Configure Database Connection:</strong>
+            <p>
+              Locate the database connection file (e.g.,
+              `includes/db_connect.php` or `config.php`) and update the database
+              credentials if necessary. Example:
+            </p>
+            <pre><code>&lt;?php
+$servername = "localhost";
+$username = "root"; // Your MySQL username
+$password = ""; // Your MySQL password (often empty for XAMPP/WAMP)
+$dbname = "attendmate_db"; // The database name you created
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?&gt;
+</code></pre>
+          </li>
+        </ol>
+
+        <h3>4.4. Accessing the Application</h3>
+        <p>
+          Once all steps are completed, open your web browser and navigate to:
+        </p>
+        <pre><code>http://localhost/AttendMate/index.php</code></pre>
+        <p>You should see the login page for AttendMate.</p>
+      </section>
+
+      <hr />
+
+      <section id="usage">
+        <h2>5. Usage Guide</h2>
+        <p>Here’s how to use AttendMate after successful installation:</p>
+
+        <h3>5.1. Login Credentials</h3>
+        <ul>
+          <li>
+            <strong>Admin Default Credentials:</strong>
+            <ul>
+              <li><strong>Email:</strong> <code>admin@attendmate.com</code></li>
+              <li>
+                <strong>Password:</strong> The password you set for the admin
+                user in `database.sql` file
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Student Credentials:</strong>
+            <p>
+              Students will log in using their registered email/username and
+              password, which can be managed by the admin or created during
+              student registration.
+            </p>
+          </li>
+        </ul>
+
+        <h3>5.2. Admin Workflow</h3>
+        <ol>
+          <li>
+            <strong>Dashboard:</strong> After logging in, you'll see the admin
+            dashboard with an overview.
+          </li>
+          <li>
+            <strong>Manage Students:</strong> Use this section to add new
+            students, edit their details, or remove them from the system.
+          </li>
+          <li>
+            <strong>Mark Attendance:</strong> Navigate to this page to record
+            attendance for specific classes/dates.
+          </li>
+          <li>
+            <strong>View Attendance:</strong> Review attendance records for
+            individual students or entire classes.
+          </li>
+          <li>
+            <strong>Attendance Reports:</strong> Generate various reports to
+            track attendance patterns and statistics.
+          </li>
+          <li>
+            <strong>Announcements:</strong> Post new announcements that will be
+            visible to all students on their dashboards.
+          </li>
+          <li><strong>Remark:</strong> Add specific remarks for students.</li>
+          <li><strong>View Remarks:</strong> See all recorded remarks.</li>
+        </ol>
+
+        <h3>5.3. Student Workflow</h3>
+        <ol>
+          <li>
+            <strong>Dashboard:</strong> Upon logging in, students see their
+            personalized dashboard.
+          </li>
+          <li>
+            <strong>My Attendance:</strong> View their attendance history and
+            current attendance percentage.
+          </li>
+          <li>
+            <strong>My Profile:</strong> Access and update personal information.
+          </li>
+          <li>
+            <strong>Announcements:</strong> Read announcements posted by the
+            administration.
+          </li>
+          <li>
+            <strong>Change Password:</strong> Update their account password.
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <section id="filestructure">
+        <h2>6. Project File Structure</h2>
+        <p>The project is organized into the following main directories:</p>
+        <pre><code>AttendMate/
+├── CSS/                  # Contains all CSS stylesheets for the project.
+│   └── dashboard.css     # Main stylesheet for the dashboard.
+├── JS/                   # Contains JavaScript files for client-side interactivity.
+│   └── (your_javascript_files)
+├── admin/                # PHP files related to administrator functionalities.
+│   ├── admin_dashboard.php
+│   ├── Manage_Students.php
+│   ├── Mark_Attendance.php
+│   ├── View_Attendance.php
+│   ├── Attendance_Reports.php
+│   ├── Announcements.php
+│   ├── remark.php
+│   └── view_all_remarks.php
+├── student/              # PHP files related to student functionalities.
+│   ├── student_dashboard.php
+│   ├── myattendance.php
+│   ├── profile.php
+│   ├── announcements.php
+│   └── changepassword.php
+├── includes/             # Common PHP files like database connection, session handling.
+│   └── (e.g., db_connect.php, functions.php)
+├── index.php             # The main login page of the application.
+├── logout.php            # Handles user logout.
+├── README.md             # The main project README file on GitHub.
+├── documentation.html    # This documentation webpage.
+└── database.sql          # SQL script for database schema and initial data.
+</code></pre>
+      </section>
+
+      <hr />
+
+      <section id="contributing">
+        <h2>7. Contributing</h2>
+        <p>
+          We welcome contributions to the AttendMate project! If you'd like to
+          contribute, please follow these steps:
+        </p>
+        <ol>
+          <li>Fork the repository.</li>
+          <li>
+            Create a new branch for your feature or bug fix:
+            <code>git checkout -b feature/your-feature-name</code> or
+            <code>bugfix/fix-bug-name</code>.
+          </li>
+          <li>
+            Make your changes and ensure your code adheres to good practices.
+          </li>
+          <li>Commit your changes with a clear and concise message.</li>
+          <li>Push your branch to your forked repository.</li>
+          <li>
+            Open a Pull Request (PR) to the `main` branch of the original
+            repository.
+          </li>
+          <li>Provide a detailed description of your changes in the PR.</li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <section id="license">
+        <h2>8. License</h2>
+        <p>
+          AttendMate is open-source software licensed under the
+          <a href="https://opensource.org/licenses/MIT" target="_blank"
+            >MIT License</a
+          >. Feel free to use, modify, and distribute it for personal or
+          commercial purposes.
+        </p>
+        <p>See the `LICENSE` file in the repository for full details.</p>
+      </section>
+
+      <hr />
+
+      <section id="contact">
+        <h2>9. Contact</h2>
+        <p>
+          If you have any questions, suggestions, or encounter issues, please
+          feel free to:
+        </p>
+        <ul>
+          <li>
+            Open an issue on the
+            <a
+              href="https://github.com/your-username/AttendMate/issues"
+              target="_blank"
+              >GitHub Issues page</a
+            >.
+          </li>
+          <li>
+            Reach out to the project maintainer at
+            <a href="mailto:your.email@example.com"
+              >chauhanvishva02@gmail.com</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <footer class="text-center mt-5 text-muted">
+        <p>&copy; 2025 AttendMate. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <!-- Bootstrap JS (optional, for features like dropdowns if you add them) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
