@@ -1,0 +1,213 @@
+/* Base styles */
+body {
+  background: #f0f4ff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.sidebar a {
+  padding: 15px 20px;
+  display: block;
+  color: #444;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: #f0f0f0;
+  color: #000;
+  transform: scale(1.03);
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-header:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Stats */
+.card-stats .card {
+  border: none;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-stats .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-yellow {
+  background: #f4b400;
+}
+
+.card-blue {
+  background: #4285f4;
+}
+
+.card-pink {
+  background: #ea4335;
+}
+
+.card-purple {
+  background: #a142f4;
+}
+
+/* Subject Card */
+.subject-card {
+  border-radius: 12px;
+  border: 1px solid #eee;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table */
+table {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  width: 100%;
+  table-layout: auto;
+  transition: transform 0.3s ease;
+}
+
+table:hover {
+  transform: scale(1.01);
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background: #6c63ff;
+  color: white;
+}
+
+/* Buttons and interactive elements */
+.btn,
+.list-group-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover,
+.list-group-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Badges */
+.badge-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .sidebar {
+    height: auto;
+    position: relative;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .sidebar a {
+    display: inline-block;
+    width: 48%;
+    margin: 5px 1%;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .dashboard-header {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  .card-stats .card {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .subject-card {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar a {
+    width: 100%;
+    margin: 3px 0;
+  }
+
+  .dashboard-header {
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}
+/* Example of what you would add to your <style> block */
+body.dark-mode {
+    background: #1a1a2e; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode .sidebar {
+    background: #2e2e4a; /* Darker sidebar */
+    border-right-color: #444466;
+}
+
+/* ... and so on for all elements you want to change */

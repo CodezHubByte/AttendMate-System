@@ -1,0 +1,194 @@
+/* CSS/login.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Animated Gradient background for a "live" and professional feel */
+    background: linear-gradient(135deg, #6a85b6, #bac8e0, #8d9db6); /* Professional blue-grey palette */
+    background-size: 400% 400%; /* Larger background size for animation */
+    animation: gradientShift 15s ease infinite; /* Animation applied */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars due to blur effect */
+}
+
+/* Keyframes for the gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.card-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(15px); /* Blur effect */
+    border-radius: 20px;
+    padding: 2.5rem; /* Increased padding */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    width: 90%;
+    max-width: 450px; /* Increased max-width */
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    transition: all 0.3s ease-in-out;
+}
+
+.avatar-circle {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent circle */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -65px auto 20px auto; /* Position above the card */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.avatar-icon {
+    color: #333; /* Darker color for avatar icon */
+    font-size: 40px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555; /* Darker color for input icons */
+}
+
+.input-field, .select-field {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem; /* Adjust padding for icon */
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    color: #333; /* Darker text color for input fields */
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-field::placeholder {
+    color: #777; /* Darker placeholder color */
+}
+
+.input-field:focus, .select-field:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.select-field option {
+    background-color: #6a85b6; /* Darker background for options, matching new palette */
+    color: white;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent button */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    color: #333; /* Darker button text color */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #333; /* Darker text color for form footer */
+}
+
+.form-footer a {
+    color: #333; /* Darker link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+    color: #555; /* Slightly lighter dark on hover */
+    text-decoration: underline;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #777; /* Darker border for checkbox */
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    margin-right: 8px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #6a85b6; /* Matching palette color when checked */
+    border-color: #6a85b6;
+}
+
+.checkbox-container input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* White checkmark for contrast */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Hide forms by default, show based on JS */
+#registration-form.hidden,
+#login-form.hidden {
+    display: none;
+}
+
+/* Icon styling (using SVG for simplicity and consistency) */
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+/* Heading color adjustment */
+h2 {
+    color: #333; /* Darker heading color */
+}
